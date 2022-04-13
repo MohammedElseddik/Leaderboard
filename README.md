@@ -6,7 +6,6 @@ The leaderboard is website displays scores submitted by different players. It al
 
 - HTML
 - CSS
-- javaScript classes
 - JavaScript (ES6 syntax and Modules)
 - Webpack
 
