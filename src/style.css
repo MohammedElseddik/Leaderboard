@@ -1,0 +1,103 @@
+*,
+*b::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 4rem;
+}
+
+.btn {
+  border: 4px solid #000;
+  box-shadow: 3px 5px #000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.main-title {
+  font-size: 8rem;
+}
+
+.main-section {
+  display: flex;
+  gap: 4rem;
+  margin: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.scores-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 55%;
+}
+
+.scores-section__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scores-section__title {
+  margin: 0 20px 0 0;
+  font-size: 3rem;
+}
+
+.refresh-btn {
+  padding: 0 1em;
+  height: 41px;
+}
+
+.scores-section__result {
+  display: flex;
+  flex-direction: column;
+  border: 4px solid #000;
+}
+
+.scores-section__result span {
+  font-size: 2rem;
+  padding: 0.8rem;
+}
+
+.scores-section__result span:nth-child(even) {
+  background: #e0e0e0;
+}
+
+.score-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 40%;
+  align-items: center;
+}
+
+.score-submit__title {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.score-submit__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.score-submit__form input {
+  border: 4px solid #000;
+  height: 35px;
+  padding: 0 10px;
+}
+
+.submit-btn {
+  padding: 0.5em 1em;
+  height: 41px;
+  align-self: flex-end;
+}
