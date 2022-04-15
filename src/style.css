@@ -12,17 +12,26 @@ html {
 
 body {
   padding: 4rem;
+  background-color: #34325c;
 }
 
 .btn {
   border: 4px solid #000;
   box-shadow: 3px 5px #000;
-  background-color: #fff;
   cursor: pointer;
+  background-color: #282562;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #282562;
 }
 
 .main-title {
   font-size: 8rem;
+  color: #fff;
 }
 
 .main-section {
@@ -48,26 +57,32 @@ body {
 .scores-section__title {
   margin: 0 20px 0 0;
   font-size: 3rem;
+  color: #fff;
 }
 
 .refresh-btn {
   padding: 0 1em;
   height: 41px;
+  color: #fff;
 }
 
 .scores-section__result {
   display: flex;
   flex-direction: column;
-  border: 4px solid #000;
+  border: 4px solid #34325c;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 5px  #282562;
 }
 
 .scores-section__result span {
   font-size: 2rem;
-  padding: 0.8rem;
+  background: #242255;
+  color: #fff;
+  padding: 0.5em;
 }
 
 .scores-section__result span:nth-child(even) {
-  background: #e0e0e0;
+  background: #29284b;
 }
 
 .score-submit {
@@ -81,6 +96,7 @@ body {
 .score-submit__title {
   margin: 0;
   font-size: 3rem;
+  color: #fff;
 }
 
 .score-submit__form {
@@ -91,13 +107,23 @@ body {
 }
 
 .score-submit__form input {
-  border: 4px solid #000;
   height: 35px;
-  padding: 0 10px;
+  padding: 0.5em;
+  background-color: #29284b;
+  border-radius: 5px;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.score-submit__form input:focus {
+  outline: none;
+  border: 4px solid #244387;
 }
 
 .submit-btn {
   padding: 0.5em 1em;
   height: 41px;
   align-self: flex-end;
+  color: #fff;
 }

@@ -24,7 +24,26 @@ To get a local copy up and running follow these simple steps.
 To setup the Awesome-books-Project, in the repo page:
 click on code (dropdown list) > Download as ZIP;
 or open terminal of path you want to install project and run this command <br>
-`git clone git@github.com:MohammedElseddik/Leaderboard.git`
+
+```sh
+  git clone git@github.com:MohammedElseddik/Leaderboard.git
+```
+
+## 🛠 Installation & Set Up to run the project locally
+
+1. Install Node Modules
+
+   ```sh
+   npm install
+   ```
+
+2. Start the development server
+
+   ```sh
+   npm start
+   ```
+
+3. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 ## Authors
 
