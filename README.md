@@ -1,6 +1,6 @@
-# Leaderboard 
+# Leaderboard
 
-The leaderboard is website displays scores submitted by different players. It also allows you to submit your score. 
+The leaderboard is website displays scores submitted by different players. It also allows you to submit your score.
 
 ## Major languages
 
@@ -8,6 +8,10 @@ The leaderboard is website displays scores submitted by different players. It al
 - CSS
 - JavaScript (ES6 syntax and Modules)
 - Webpack
+
+## Deployment
+
+https://mohammedelseddik.github.io/Leaderboard/
 
 ## Getting Started
 
