@@ -1,3 +1,5 @@
+import { updateUserUi } from "./functionalities";
+
 const scores = document.querySelector('.scores-section__result');
 const refreshBtn = document.querySelector('.refresh-btn');
 const submitBtn = document.querySelector('.submit-btn');
@@ -6,12 +8,14 @@ const gameId = 'JXtYiaLm4miqbgKcY734';
 
 const fetchGameData = async (url, gameId) => {
     try {
-        console.log('hello')
         const data = await fetch(url + gameId + '/scores');
         console.log(data);
         const response = await data.json();
         console.log(response)
-        return response;
+        console.log(response.result)
+        const results = response.result;
+        updateUserUi(results);
+        return response.result[0].user;
     } catch (error) {
         console.log(error);
     }
@@ -28,9 +32,7 @@ const postData = async (url, gameId, user, score) => {
                 "user": `${user}`,
                 "score": score
             }),
-        })
-        console.log('helo')
-        console.log(data)
+        });
     } catch (error) {
         console.log(error);
     }

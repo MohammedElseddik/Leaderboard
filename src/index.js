@@ -1,5 +1,5 @@
 import './style.css';
-import { URL, gameId, refreshBtn, submitBtn, fetchGameData } from './modules/API-services';
+import { URL, gameId, refreshBtn, submitBtn, fetchGameData, postData } from './modules/API-services';
 import { inputCheck } from './modules/functionalities.js';
 
 
