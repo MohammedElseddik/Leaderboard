@@ -78,6 +78,7 @@ body {
   padding: 0.8rem;
   background: #242255;
   color: #fff;
+  padding: 0.5em;
 }
 
 .scores-section__result span:nth-child(even) {
