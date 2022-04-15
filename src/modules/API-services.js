@@ -3,7 +3,7 @@ import { updateUserUi } from './functionalities.js';
 const refreshBtn = document.querySelector('.refresh-btn');
 const submitBtn = document.querySelector('.submit-btn');
 const URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
-const gameId = 'JXtYiaLm4miqbgKcY734';
+const gameId = 'DHqPtHrqx3R4XrXb8LMY';
 
 const fetchGameData = async (url, gameId) => {
   try {
