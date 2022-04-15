@@ -116,7 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_API_services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/API-services */ \"./src/modules/API-services.js\");\n/* harmony import */ var _modules_functionalities_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/functionalities.js */ \"./src/modules/functionalities.js\");\n\n\n\n\n\n\n\n_modules_API_services__WEBPACK_IMPORTED_MODULE_1__.submitBtn.addEventListener('click', (event) => {\n    event.preventDefault();\n    (0,_modules_functionalities_js__WEBPACK_IMPORTED_MODULE_2__.inputCheck)();\n})\n\n_modules_API_services__WEBPACK_IMPORTED_MODULE_1__.refreshBtn.addEventListener('click', (event) => {\n    event.preventDefault();\n    (0,_modules_API_services__WEBPACK_IMPORTED_MODULE_1__.fetchGameData)(_modules_API_services__WEBPACK_IMPORTED_MODULE_1__.URL, _modules_API_services__WEBPACK_IMPORTED_MODULE_1__.gameId);\n});\nconsole.log(_modules_API_services__WEBPACK_IMPORTED_MODULE_1__.URL)\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/API-services.js":
+/*!*************************************!*\
+  !*** ./src/modules/API-services.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"URL\": () => (/* binding */ URL),\n/* harmony export */   \"fetchGameData\": () => (/* binding */ fetchGameData),\n/* harmony export */   \"gameId\": () => (/* binding */ gameId),\n/* harmony export */   \"postData\": () => (/* binding */ postData),\n/* harmony export */   \"refreshBtn\": () => (/* binding */ refreshBtn),\n/* harmony export */   \"scores\": () => (/* binding */ scores),\n/* harmony export */   \"submitBtn\": () => (/* binding */ submitBtn)\n/* harmony export */ });\nconst scores = document.querySelector('.scores-section__result');\nconst refreshBtn = document.querySelector('.refresh-btn');\nconst submitBtn = document.querySelector('.submit-btn');\nconst URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';\nconst gameId = 'JXtYiaLm4miqbgKcY734';\n\nconst fetchGameData = async (url, gameId) => {\n    try {\n        console.log('hello')\n        const data = await fetch(url + gameId + '/scores');\n        console.log(data);\n        const response = await data.json();\n        console.log(response)\n        return response;\n    } catch (error) {\n        console.log(error);\n    }\n}\n\nconst postData = async (url, gameId, user, score) => {\n    try {\n        const data = await fetch(url + gameId + '/scores', {\n            method: 'post',\n            headers: {\n                'Content-Type': 'application/json',\n            },\n            body: JSON.stringify({\n                \"user\": `${user}`,\n                \"score\": score\n            }),\n        })\n        console.log('helo')\n        console.log(data)\n    } catch (error) {\n        console.log(error);\n    }\n}\n\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/API-services.js?");
+
+/***/ }),
+
+/***/ "./src/modules/functionalities.js":
+/*!****************************************!*\
+  !*** ./src/modules/functionalities.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"inputCheck\": () => (/* binding */ inputCheck)\n/* harmony export */ });\n/* harmony import */ var _API_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./API-services */ \"./src/modules/API-services.js\");\n\n\n\nconst name = document.querySelector('.nameInput');\nconst score = document.querySelector('.scoreInput');\n\nconst inputCheck = () => {\n    if (name.value.trim() === '' || score.value.trim() === '') return\n    ;(0,_API_services__WEBPACK_IMPORTED_MODULE_0__.postData)(_API_services__WEBPACK_IMPORTED_MODULE_0__.URL, _API_services__WEBPACK_IMPORTED_MODULE_0__.gameId, name.value.trim(), score.value.trim())\n}\n\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/functionalities.js?");
 
 /***/ })
 

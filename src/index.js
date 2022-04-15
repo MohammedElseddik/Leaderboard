@@ -1,12 +1,13 @@
 import './style.css';
-import { URL, gameId, scores, refreshBtn, submitBtn, name, score, fetchGameData, postData } from './modules/API-services';
+import { URL, gameId, refreshBtn, submitBtn, fetchGameData } from './modules/API-services';
+import { inputCheck } from './modules/functionalities.js';
 
 
 
 
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    postData(URL, gameId, name.value, score.value);
+    inputCheck();
 })
 
 refreshBtn.addEventListener('click', (event) => {
