@@ -2,27 +2,20 @@ const scores = document.querySelector('.scores-section__result');
 const refreshBtn = document.querySelector('.refresh-btn');
 const submitBtn = document.querySelector('.submit-btn');
 const URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+const gameId = 'JXtYiaLm4miqbgKcY734';
 
-const getIdKey = async (url) => {
+const fetchGameData = async (url, gameId) => {
     try {
-        const data = await fetch(url, {
-            method: 'post',
-            headers: {
-                'Content-type': 'application/json',
-            },
-            body: JSON.stringify({
-                "name": "My cool new game"
-            }),
-        });
+        console.log('hello')
+        const data = await fetch(url + gameId + '/scores');
+        console.log(data);
         const response = await data.json();
-        console.log(response);
+        console.log(response)
         return response;
     } catch (error) {
         console.log(error);
     }
+
 }
 
-
-
-
-export { URL, scores, refreshBtn, submitBtn, getIdKey };
+export { URL, gameId, scores, refreshBtn, submitBtn, fetchGameData };

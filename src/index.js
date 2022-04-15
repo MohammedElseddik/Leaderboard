@@ -1,8 +1,11 @@
 import './style.css';
-import { URL, scores, refreshBtn, submitBtn, getIdKey } from './modules/API-services';
+import { URL, gameId, scores, refreshBtn, submitBtn, fetchGameData } from './modules/API-services';
 
 
 
 
-refreshBtn.addEventListener('click', getIdKey(URL));
+refreshBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    fetchGameData(URL, gameId);
+});
 console.log(URL)
