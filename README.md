@@ -29,7 +29,7 @@ or open terminal of path you want to install project and run this command <br>
   git clone git@github.com:MohammedElseddik/Leaderboard.git
 ```
 
-## 🛠 Installation & Set Up
+## 🛠 Installation & Set Up to run the project locally
 
 1. Install Node Modules
 
